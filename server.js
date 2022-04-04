@@ -23,7 +23,7 @@ const psql = knex({
 })
 
 const corsOptions = {
-  origin: 'https://young-plains-79015.herokuapp.com/',
+  origin: 'http://localhost:3000/',
   optionsSuccessStatus: 200
 }
 
