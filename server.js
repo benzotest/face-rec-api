@@ -22,15 +22,9 @@ const psql = knex({
   }
 })
 
-const whitelist = ['https://young-plains-79015.herokuapp.com/']
-const corsOptions = function (req, callback) {
-  let corsOptions;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  } else {
-    corsOptions = { origin: false } // disable CORS for this request
-  }
-  callback(null, corsOptions) // callback expects two parameters: error and options
+const corsOptions = {
+  origin: 'https://young-plains-79015.herokuapp.com/',
+  optionsSuccessStatus: 200
 }
 
 app.use(bodyParser.json());
