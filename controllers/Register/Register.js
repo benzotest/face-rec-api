@@ -5,7 +5,9 @@ const registerHandler = (req,res,psql)=>{
 	if((!email.length || !password.length || !name.length) ||
 		(!email.includes("@",) || !email.includes("."))){
 		console.log("nope")
-		return res.json("nope")
+		return res.json({
+			status: "nope"
+		})
 	}
 	
 	console.log("hash",password)
