@@ -22,7 +22,7 @@ const psql = knex({
   }
 })
 
-const whitelist = ['http://localhost:3001']
+const whitelist = ['http://localhost:3001', 'https://young-plains-79015.herokuapp.com']
 const corsOptions = function (req, callback) {
   let corsOptions;
   if (whitelist.indexOf(req.header('Origin')) !== -1) {
