@@ -22,7 +22,7 @@ const psql = knex({
 }})
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://limitless-harbor-63855.herokuapp.com',
   optionsSuccessStatus: 200
 }
 
