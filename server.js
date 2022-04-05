@@ -31,14 +31,13 @@ app.use(cors(corsOptions));
 
 
 app.get('/', (req, res) =>{
-	// psql.select("*")
-	// .from("users")
-	// .then((data)=>{
-	// 	console.log(data)
-	// 	res.json(data)
-	// })
+	psql.select("*")
+	.from("users")
+	.then((data)=>{
+		console.log(data)
+		res.json(data)
+	})
   //res.sendFile(path.join(__dirname, '/index.html'));
-  res.json("hi")
 });
 
 app.post("/signin", (req,res)=>{SignIn.signInHandler(req,res,bcryptjs,psql)})

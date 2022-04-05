@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "nodemon ./server.js",
+    "git": "git add ., git commit -m'update', git push origin",
+    "heroku": "git push heroku"
   },
   "keywords": [],
   "author": "",
