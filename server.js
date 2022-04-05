@@ -26,7 +26,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 }
 
-const useless;
+
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
