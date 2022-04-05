@@ -14,13 +14,12 @@ const Profile = require('./controllers/Profile_id/Profile_id.js');
 
 const psql = knex({
   client: 'pg',
-  connection: {
-    host : '127.0.0.1',
-    user : 'ben',
-    password : '',
-    database : 'test'
+  connection:{
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
   }
-})
+}})
 
 const corsOptions = {
   origin: 'http://localhost:3000',
